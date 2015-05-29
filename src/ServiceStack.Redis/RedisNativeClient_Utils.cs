@@ -307,12 +307,20 @@ namespace ServiceStack.Redis
             }
         }
 
-        private int SafeReadByte()
-        {
-            return Bstream.ReadByte();
-        }
+	    private int SafeReadByte()
+	    {
+		    try
+		    {
+			    return Bstream.ReadByte();
+		    }
+		    catch (Exception e)
+		    {
+			    HadExceptions = true;
+			    throw;
+		    }
+	    }
 
-        protected void SendExpectSuccess(params byte[][] cmdWithBinaryArgs)
+	    protected void SendExpectSuccess(params byte[][] cmdWithBinaryArgs)
         {
             if (!SendCommand(cmdWithBinaryArgs))
                 throw CreateConnectionError();
@@ -609,7 +617,9 @@ namespace ServiceStack.Redis
 
         private byte[][] ReadMultiData()
         {
+	        var t1 = 1;
             int c = SafeReadByte();
+
             if (c == -1)
                 throw CreateResponseError("No more data");
 
