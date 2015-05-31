@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <version>3.10.0</version>
+        <authors>Demis Bellot</authors>
+        <owners>OpenTable</owners>
+        <id>ServiceStack.Redis</id>
+        <title>C# Redis client for the Redis NoSQL DB</title>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      C# Redis Client for the worlds fastest distributed NoSQL datastore. Byte[], String and POCO Typed clients.
+      Thread-Safe Basic and Pooled client managers included.
+      Includes Open Table bugfix for SafeReadByte errors
+    </description>
+        <copyright>ServiceStack 2013 and contributors</copyright>
+    <dependencies>
+      <dependency id="ServiceStack.Common" version="[3,4)" />
+    </dependencies>
+    </metadata>
+    <files>
+        <file src="ServiceStack.Redis\bin\release\ServiceStack.Redis.dll" target="lib\net35\ServiceStack.Redis.dll" />
+        <file src="ServiceStack.Redis\bin\release\ServiceStack.Redis.pdb" target="lib\net35\ServiceStack.Redis.pdb" />    
+   </files>
+</package>
