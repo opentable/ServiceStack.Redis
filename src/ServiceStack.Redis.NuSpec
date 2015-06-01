@@ -18,7 +18,7 @@
     </dependencies>
     </metadata>
     <files>
-        <file src="ServiceStack.Redis\bin\release\ServiceStack.Redis.dll" target="lib\net35\ServiceStack.Redis.dll" />
-        <file src="ServiceStack.Redis\bin\release\ServiceStack.Redis.pdb" target="lib\net35\ServiceStack.Redis.pdb" />    
+        <file src="src\ServiceStack.Redis\bin\release\ServiceStack.Redis.dll" target="lib\net35\ServiceStack.Redis.dll" />
+        <file src="src\ServiceStack.Redis\bin\release\ServiceStack.Redis.pdb" target="lib\net35\ServiceStack.Redis.pdb" />    
    </files>
 </package>
